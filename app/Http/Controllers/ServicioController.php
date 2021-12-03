@@ -43,10 +43,10 @@ class ServicioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(\App\Http\Requests\StoreServicio $request)
+    public function store(StoreServicio $request)
     {
 
-        // $request
+        //\App\Http\Requests\ServicioStoreRequest $request
              //Crear el nuevo servicio
         $servicio= new Servicio;
         //asignar id
