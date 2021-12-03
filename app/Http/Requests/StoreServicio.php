@@ -26,7 +26,7 @@ class StoreServicio extends FormRequest
         return [
             //
             "fecha"=>'required',
-            "peticion"=>'required|min:8',
+            "peticion"=>'required|min:10',
             "usupeticion"=>'required|min:4',
             "tipservi"=>'required'
         ];

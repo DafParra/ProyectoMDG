@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
         <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ asset('css/Welcomstyle.css') }}" rel="stylesheet" />
+
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 </head>
 <body>
@@ -108,10 +108,10 @@
         <!-- Card Body -->
         <div class="card-body">
             <div class="chart-area">
-                
+
                 <p>
-                Erigida canónicamente mediante Decreto 376 del 21 de marzo de 1991 por Monseñor Mario Revollo Bravo, 
-                Arzobispo de la Arquidiócesis de Bogotá y de la Zona Pastoral Episcopal de la Sagrada Eucaristía, en su momento. 
+                Erigida canónicamente mediante Decreto 376 del 21 de marzo de 1991 por Monseñor Mario Revollo Bravo,
+                Arzobispo de la Arquidiócesis de Bogotá y de la Zona Pastoral Episcopal de la Sagrada Eucaristía, en su momento.
                 En el año 2003, pasamos a ser jurisdicción de la Diócesis de Engativá, creada el 06 de agosto de 2003.</p>
             </div>
         </div>
@@ -125,10 +125,10 @@
         <!-- Card Body -->
         <div class="card-body">
             <div class="chart-area">
-                
+
                 <p>
-                Señor, por el misterioso designio de tu amor, has querido que la Virgen María fuese madre del autor de la gracia 
-                y estuviese asociada a Él en el misterio de la redención humana; permite que ella nos alcance con abundancia tus dones 
+                Señor, por el misterioso designio de tu amor, has querido que la Virgen María fuese madre del autor de la gracia
+                y estuviese asociada a Él en el misterio de la redención humana; permite que ella nos alcance con abundancia tus dones
                 y nos conduzca hasta la salvación eterna. Por Jesucristo Nuestro Señor. Amén.
 
             </p>
@@ -147,24 +147,24 @@
         <!-- Card Body -->
         <div class="card-body">
             <div class="chart-area">
-                
+
                 <p>
-                    Esta advocación significa dos cosas: que es Madre de Cristo (la Gracia Suprema) y que es mediadora de todas las gracias. 
+                    Esta advocación significa dos cosas: que es Madre de Cristo (la Gracia Suprema) y que es mediadora de todas las gracias.
                     Cristo, manantial de la divina Gracia. María, Madre de Cristo, Madre de la Divina Gracia.
 
-                    Por el "Sí" de María pronunciado ante el ángel Gabriel, Jesucristo se encarnó, y haciéndose hombre hizo posible que la 
-                    humanidad volviera a participar de la Gracia de Dios, entonces María es también la Madre de esa gracia divina. Pero, 
-                    ¿qué es realmente la gracia? Es todo don que recibimos "gratuitamente" (por eso se llama gracia) de Dios. Ahora bien, 
-                    no tienes que imaginar la gracia como algo indefinido que se desprende de Dios y llega a nosotros de alguna manera; 
-                    la gracia divina es Dios mismo que se hace don y se entrega a nosotros. Ese don es, ante todo, Jesucristo, 
-                    a quien el Padre nos envió para que se entregara por nosotros y viviera en nuestro corazón por siempre. 
-                    Estar en gracia de Dios es participar de su misma presencia en nosotros. "Yo soy la vida", dijo Jesús; 
-                    y en otra ocasión dijo también: "Yo vine para que todos tengan vida y la tengan en abundancia". 
-                    Tener vida es poseer a Jesús, ser parte de su intimidad divina, de su infinito amor. 
+                    Por el "Sí" de María pronunciado ante el ángel Gabriel, Jesucristo se encarnó, y haciéndose hombre hizo posible que la
+                    humanidad volviera a participar de la Gracia de Dios, entonces María es también la Madre de esa gracia divina. Pero,
+                    ¿qué es realmente la gracia? Es todo don que recibimos "gratuitamente" (por eso se llama gracia) de Dios. Ahora bien,
+                    no tienes que imaginar la gracia como algo indefinido que se desprende de Dios y llega a nosotros de alguna manera;
+                    la gracia divina es Dios mismo que se hace don y se entrega a nosotros. Ese don es, ante todo, Jesucristo,
+                    a quien el Padre nos envió para que se entregara por nosotros y viviera en nuestro corazón por siempre.
+                    Estar en gracia de Dios es participar de su misma presencia en nosotros. "Yo soy la vida", dijo Jesús;
+                    y en otra ocasión dijo también: "Yo vine para que todos tengan vida y la tengan en abundancia".
+                    Tener vida es poseer a Jesús, ser parte de su intimidad divina, de su infinito amor.
                     El gran regalo de la redención es el Amor mismo de Dios hecho don para el hombre.
-                    
-                     Ese Amor que es el Espíritu Santo, la tercera persona de la Santísima Trinidad. 
-                     Por eso San Pablo nos recordaría que "somos templo del Espíritu Santo", y nos invitaría a tratar nuestro cuerpo como el lugar donde habita Dios. 
+
+                     Ese Amor que es el Espíritu Santo, la tercera persona de la Santísima Trinidad.
+                     Por eso San Pablo nos recordaría que "somos templo del Espíritu Santo", y nos invitaría a tratar nuestro cuerpo como el lugar donde habita Dios.
                      Por eso se te ha dicho, desde que eras niño, que lo más importante en nuestra vida es conservar la gracia santificante.</p>
             </div>
         </div>
@@ -178,10 +178,10 @@
         <!-- Card Body -->
         <div class="card-body">
             <div class="chart-area">
-                
+
                 <p>
-                    En el año 1989 el párroco de la Inmaculada Concepción de Suba, Enrique Buriticá, solicitó la segregación del barrio Tibabuyes, 
-                    las Flores, El Poa, Santa Bárbara, Villamaría, entre otros para la  creación de la nueva parroquia, 
+                    En el año 1989 el párroco de la Inmaculada Concepción de Suba, Enrique Buriticá, solicitó la segregación del barrio Tibabuyes,
+                    las Flores, El Poa, Santa Bárbara, Villamaría, entre otros para la  creación de la nueva parroquia,
                     debido al crecimiento de la población y para atenderla pastoralmente.
 
                     Erigida canónicamente mediante Decreto 376 del 21 de marzo de 1991.
@@ -278,7 +278,7 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 
 
@@ -291,14 +291,14 @@
     <!-- Card Body -->
     <div class="card-body">
         <div class="chart-area">
-            
+
             <div class="blog-card">
                 <div class="meta">
                   <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
                   <ul class="details">
                     <li class="author"><a href="#">servicios</a></li>
                     <li class="date">Padre Alejandro Fuentes</li>
-        
+
                   </ul>
                 </div>
                 <div class="description">
@@ -314,7 +314,7 @@
     </div>
     <div class="card-body">
         <div class="chart-area">
-            
+
             <div class="blog-card alt">
         <div class="meta">
           <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>

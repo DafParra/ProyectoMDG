@@ -33,7 +33,7 @@
                             </div>
 
 
-                            
+
 
 
 
@@ -60,10 +60,10 @@
                             </div>
                         </div>
 
-                        
-                                <input  type="checkbox"   required "> <span> Aceptas terminos y condiciones<strong class='text-md-left text-danger'>*</strong></span> 
-                                
-                        
+
+                                <input  type="checkbox"   required > <span> Aceptas terminos y condiciones<strong class='text-md-left text-danger'>*</strong></span>
+
+
 
                         <div class="form-group row mb-0 ">
                             <div class="col-md-12 ">

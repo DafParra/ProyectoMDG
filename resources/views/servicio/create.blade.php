@@ -2,7 +2,7 @@
 
 @section('contenido')
     <h1 style="color: #B9579C">Nuevo Servicio</h1>
-    <form method="POST" action="{{route('servicios.store')}}" class="create">
+    <form method="POST" action="{{route('servicios.store')}}" >
         @csrf
         <div class="mt-4">
             <label for="fecha" class="form-label">Fecha:</label><strong class='text-md-left text-danger'>*</strong>

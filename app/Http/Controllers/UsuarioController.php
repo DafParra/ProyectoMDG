@@ -7,6 +7,7 @@ use App\Models\Usuario;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\ClienteUpdateRequest;
 use App\Http\Requests\StoreUsuario;
+use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
 
 class UsuarioController extends Controller
@@ -34,7 +35,8 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        return view('usuario.create');
+        $roles = Role::all()->pluck('name','id');
+        return view('usuario.create', compact('roles'));
 
     }
 
@@ -46,8 +48,11 @@ class UsuarioController extends Controller
      */
     public function store(StoreUsuario $request)
     {
-
-
+        $usuario = Usuario::create($request->only('name','email')
+        + [
+            'password'=>bcrypt($request->input('password')),
+        ]);
+       /*
              //Crear el nuevo empleado
         $usuario= new Usuario;
         //asignar id
@@ -56,10 +61,13 @@ class UsuarioController extends Controller
         $usuario->id=$maxid;
         $usuario->name = $request->input('name');
         $usuario->email = $request->input('email');
-        $usuario->save();
+        $usuario->password = $request->input('password');
+        $usuario->save();*/
 
+        $roles = $request->input('permissions', []);
+        $usuario->syncRoles($roles);
         //rediccionar al index, con mensaje de exito
-        return redirect('usuarios')->with('mensaje3','Ok');
+        return redirect('usuarios')->with('roles','mensaje3','Ok');
 
     }
 
@@ -88,7 +96,7 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) 
+    public function update(Request $request, $id)
     {
         //seleccionar el cliente a actualizar
         $usuario=Usuario::find($id);
@@ -118,5 +126,5 @@ class UsuarioController extends Controller
             ->route('usuarios.index')
             -> with('mensaje','Ok');
     }
-    
+
 }

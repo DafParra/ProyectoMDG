@@ -34,14 +34,14 @@
         <style>
             .active{
                 background-color: #bcbcbd9d;
-                
+
             }
         </style>
 </head>
 <body>
 
 
-    
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -64,6 +64,16 @@
                     <i class="fas fa-home " style="color: #B9579C"></i>
                     <span class="" style="color: #B9579C">Inicio</span></a>
             </li>
+            <li class="nav-item ">
+                <a  href="{{ url('/permissions') }}" class="{{request()->routeIs('permissions.index')?'active':''}} nav-link ">
+                    <i class="fas fa-home " style="color: #B9579C"></i>
+                    <span class="" style="color: #B9579C">Permisos</span></a>
+            </li>
+            <li class="nav-item ">
+                <a  href="{{ url('/roles') }}" class="{{request()->routeIs('roles.index')?'active':''}} nav-link ">
+                    <i class="fas fa-home " style="color: #B9579C"></i>
+                    <span class="" style="color: #B9579C">Roles</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider " style="color: #B9579C">
@@ -75,8 +85,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link "href="{{ route('usuarios.index') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo" class="{{request()->routeIs('usuarios')?'active':''}} ">
+                <a class="nav-link "href="{{ route('users.index') }}" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo" class="{{request()->routeIs('users')?'active':''}} ">
                     <i class="fas fa-users " style="color: #B9579C"></i>
                     <span class="" style="color: #B9579C">Usuarios</span>
                 </a>
@@ -98,7 +108,7 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu 
+            <!-- Nav Item - Utilities Collapse Menu
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
@@ -117,7 +127,7 @@
                 </div>
             </li>-->
 
-            <!-- Divider 
+            <!-- Divider
             <hr class="sidebar-divider">-->
 
 
@@ -190,7 +200,7 @@
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                                 @endif
-    
+
                                 @if (Route::has('register'))
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -201,14 +211,14 @@
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
                                     </a>
-    
+
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-    
+
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
@@ -230,7 +240,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        
+
     </div>
 
     <!-- Content Row -->
@@ -320,83 +330,7 @@
         </div>
     </div>
 
-    <!-- Content Row -->
 
-    <div class="row">
-
-        <!-- Area Chart -->
-        <div class="col-xl-8 col-lg-7">
-            <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div
-                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                    <div class="dropdown no-arrow">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                            aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Dropdown Header:</div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="myAreaChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pie Chart -->
-        <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div
-                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                    <div class="dropdown no-arrow">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                            aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Dropdown Header:</div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                        <canvas id="myPieChart"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-primary"></i> Direct
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> Social
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-info"></i> Referral
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -406,76 +340,13 @@
             @yield('content')
         </main>
     </div>
-
-    
-<section class="row">
-        <div class="flip-card col-md-3">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="cbc.jpg"  style="width:300px;height:400px;">
-                </div>
-                <div class="flip-card-back">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                </div>
             </div>
-        </div>
-        <div class="flip-card col-md-3">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="cbc.jpg"  style="width:300px;height:400px;">
-                </div>
-                <div class="flip-card-back">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                </div>
-            </div>
-        </div>
-</section>
-
-    <div class="blog-card">
-        <div class="meta">
-          <div class="photo"><img src="images.jpg" ></div>
-          <ul class="details">
-            <li class="author"><a href="#">servicios</a></li>
-            <li class="date">Padre Alejandro Fuentes</li>
-
-          </ul>
-        </div>
-        <div class="description">
-          <h1>Eucaristia Comunitaria</h1>
-          <h2>Haz la peticion de una eucaristia</h2>
-          <p> Estas son eucaristias comunitarias las cuales se debe pagar una suma voluntaria que no baje de 30 mil pesos</p>
-          <p class="read-more">
-            <a href="#">Leer mas</a>
-          </p>
-        </div>
-      </div>
-      <div class="blog-card alt">
-        <div class="meta">
-          <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
-          <ul class="details">
-            <li class="author"><a href="#"></a>Eucaristia Particular</li>
-            <li class="date">Padre Alejandro Fuentes</li>
-          </ul>
-        </div>
-        <div class="description">
-          <h1>Eucaristias Particulares</h1>
-          <h2>Haz la peticion de una eucaristia</h2>
-          <p>Estas son eucaristias particulares la cuales se debe pagar no menos de 60.000 y son privadas solo para tu familia y allegados</p>
-          <p class="read-more">
-            <a href="#">leer mas</a>
-          </p>
-        </div>
-      </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="{{ asset('js/Welcomscript.js')}}"></script>
     <script src="js/sb-admin-2.min.js"></script>
-      
+
 
     <!--Footer -->
     <footer class="bg-dark text-light">
@@ -489,19 +360,19 @@
                 <ul class="col-4 list-unstyled">
                     <li>Copyright (c) 2021 Sacris</li>
                     <li>All Rights Reserved</li>
-                    
+
                 </ul>
                 <!-- Menu-->
                 <ul class="col-4 list-unstyled">
                     <li>Informacion de contacto</li>
                     <li><a href="#"><i class="fas fa-envelope-square fa-sm"></i> sacrisMDG@gmail.com</li></a>
                 </ul>
-                
+
             </nav>
 
         </div>
 
-  
+
 </footer>
 
 

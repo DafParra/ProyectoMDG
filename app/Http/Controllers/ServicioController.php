@@ -23,17 +23,6 @@ class ServicioController extends Controller
         return view('servicio.index')->with('servicios', $servicios);
     }
 
-    public function pdf()
-    {
-        //seleccionar todos los clientes
-        $servicios = Servicio::paginate();
-
-        $pdf = PDF::loadView('servicio.pdf',['servicios'=>$servicios]);
-       
-        return $pdf->stream();
-        //enviar datos seleccionados a la vista
-        //return view('servicio.pdf')->with('servicios', $servicios);
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -54,10 +43,10 @@ class ServicioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreServicio $request)
+    public function store(\App\Http\Requests\StoreServicio $request)
     {
 
-        //\App\Http\Requests\ServicioStoreRequest $request
+        // $request
              //Crear el nuevo servicio
         $servicio= new Servicio;
         //asignar id
@@ -73,7 +62,7 @@ class ServicioController extends Controller
         $servicio->save();
 
         //rediccionar al index, con mensaje de exito
-        return redirect('servicios') ->with('mensaje3','Ok');
+        return redirect('servicios.index') ->with('mensaje3','Ok');
 
     }
 
@@ -83,11 +72,15 @@ class ServicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    public function show(Servicio $servicio)
     {
+        $servicio ->load('tiposervicio');
+
+        return view('servicio.show', compact('servicio'));
         //seleccionar cliente en base de datos
         //
-        return view ('servicio.show') -> with('servicio', Servicio::find($id));
+
     }
 
     /**

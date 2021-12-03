@@ -36,7 +36,7 @@
         <style>
             .active{
                 background-color: #bcbcbd9d;
-                
+
             }
         </style>
 </head>
@@ -63,6 +63,16 @@
                     <i class="fas fa-home " style="color: #B9579C"></i>
                     <span class="" style="color: #B9579C">Inicio</span></a>
             </li>
+            <li class="nav-item ">
+                <a  href="{{ url('/permissions') }}" class="{{request()->routeIs('permissions.index')?'active':''}} nav-link ">
+                    <i class="fas fa-list-alt " style="color: #B9579C"></i>
+                    <span class="" style="color: #B9579C">Permisos</span></a>
+            </li>
+            <li class="nav-item ">
+                <a  href="{{ url('/roles') }}" class="{{request()->routeIs('roles.index')?'active':''}} nav-link ">
+                    <i class="fas fa-user-tag " style="color: #B9579C"></i>
+                    <span class="" style="color: #B9579C">Roles</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider " style="color: #B9579C">
@@ -74,8 +84,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a  href="{{ route('usuarios.index') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo" class="{{request()->routeIs('usuarios.index') ? 'active' : ''}} nav-link ">
+                <a  href="{{ route('users.index') }}" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo" class="{{request()->routeIs('users.index') ? 'active' : ''}} nav-link ">
                     <i class="fas fa-users " style="color: #B9579C"></i>
                     <span class="" style="color: #B9579C">Usuarios</span>
                 </a>
@@ -97,7 +107,7 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu 
+            <!-- Nav Item - Utilities Collapse Menu
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
@@ -116,7 +126,7 @@
                 </div>
             </li>-->
 
-            <!-- Divider 
+            <!-- Divider
             <hr class="sidebar-divider">-->
 
 
@@ -189,7 +199,7 @@
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                                 @endif
-    
+
                                 @if (Route::has('register'))
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -200,14 +210,14 @@
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
                                     </a>
-    
+
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-    
+
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
@@ -225,7 +235,7 @@
 
         <main class="py-4">
             @yield('content')
-            
+
         </main>
 <div class="container">
         @yield('contenido')
@@ -243,12 +253,12 @@
                     cambio.type = "password";
                     $('.icon').removeClass('far fa-eye').addClass('far fa-eye-slash');
                 }
-            } 
-            
-            
+            }
+
+
         </script>
 
-    
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
