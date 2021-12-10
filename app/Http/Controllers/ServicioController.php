@@ -23,6 +23,17 @@ class ServicioController extends Controller
         return view('servicio.index')->with('servicios', $servicios);
     }
 
+    public function pdf()
+    {
+        //seleccionar todos los clientes
+        $servicios = Servicio::paginate();
+
+        $pdf = PDF::loadView('servicio.pdf',['servicios'=>$servicios]);
+
+        return $pdf->stream();
+        //enviar datos seleccionados a la vista
+        //return view('servicio.pdf')->with('servicios', $servicios);
+    }
 
     /**
      * Show the form for creating a new resource.
